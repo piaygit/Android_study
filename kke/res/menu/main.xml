@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.kke.MainActivity" >
+<!-- menu菜单资源文件 -->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="add"
+        app:showAsAction="never"/>
+        <item
+        android:id="@+id/action_settings1"
+        android:orderInCategory="100"
+        android:title="remove"
+        app:showAsAction="never"/>
+</menu>
