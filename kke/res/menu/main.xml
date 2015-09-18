@@ -4,12 +4,12 @@
     tools:context="com.example.kke.MainActivity" >
 <!-- menu菜单资源文件 -->
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/add"
         android:orderInCategory="100"
         android:title="add"
         app:showAsAction="never"/>
         <item
-        android:id="@+id/action_settings1"
+        android:id="@+id/remove"
         android:orderInCategory="100"
         android:title="remove"
         app:showAsAction="never"/>

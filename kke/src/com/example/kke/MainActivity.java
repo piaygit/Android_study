@@ -1,5 +1,6 @@
 package com.example.kke;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,10 +18,22 @@ public class MainActivity extends Activity {
 	}
 	
 	public void piay_test(View view) {
-		// TODO Auto-generated method stub
-      Toast.makeText(getApplicationContext(), "1622", Toast.LENGTH_SHORT).show();      
+      /*Toast.makeText(getApplicationContext(), "1622", Toast.LENGTH_SHORT).show(); */   
+/*		Intent intent=new Intent(MainActivity.this,second.class);
+		startActivity(intent);*/
+		//显示intent
+		Intent intent1=new Intent();
+		intent1.setClass(this, second.class);
+		startActivity(intent1);
 	}
-
+	
+	public void piay_test1(View view) {
+      //button按钮方法--隐式intent
+		Intent intent=new Intent();
+		intent.setAction("i_have_a_dream");
+		intent.addCategory("android.intent.category.DEFAULT");
+		startActivity(intent);
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		//创建menu菜单
@@ -36,16 +49,14 @@ public class MainActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		//menu菜单时间监听
 		int id = item.getItemId();
-		switch(item.getItemId()){
-		case R.id.action_settings :
-			Toast.makeText(getApplicationContext(), "add", Toast.LENGTH_SHORT).show();
+		switch(id){
+		case R.id.add :
+			//隐式intent跳转
+            Toast.makeText(getApplicationContext(), "add", Toast.LENGTH_SHORT).show();
 		    break;
-		case R.id.action_settings1:
-			Toast.makeText(getApplicationContext(), "remove",-1).show();		
-		}
-		
-		if (id == R.id.action_settings) {
-			return true;
+		case R.id.remove:
+			Toast.makeText(getApplicationContext(), "remove",-1).show();
+			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}

@@ -18,8 +18,18 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 注册activity -->
+        <activity android:name=".second" >
+        </activity>
+        <activity
+            android:name=".ys"
+            android:label="隐式intent" >
+            <intent-filter>
+                <action android:name="i_have_a_dream" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>
